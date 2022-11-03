@@ -1,0 +1,1 @@
+python model.py -t /mnt/bigboi_8TB/e5_prior/unicorn/sketch/$1/train -u /mnt/bigboi_8TB/e5_prior/unicorn/sketch/$1/test -c 0 -v -m mean -o $1.txt

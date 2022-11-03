@@ -1,0 +1,600 @@
+0.00
+         Pr   Re       Acc        F1
+0  0.108108  1.0  0.108108  0.195122Pr     0.108108
+Re     1.000000
+Acc    0.108108
+F1     0.195122
+dtype: float64Pr    NaN
+Re    NaN
+Acc   NaN
+F1    NaN
+dtype: float64
+
+0.10
+         Pr   Re       Acc        F1
+0  0.108108  1.0  0.108108  0.195122Pr     0.108108
+Re     1.000000
+Acc    0.108108
+F1     0.195122
+dtype: float64Pr    NaN
+Re    NaN
+Acc   NaN
+F1    NaN
+dtype: float64
+
+0.20
+         Pr   Re       Acc        F1
+0  0.108108  1.0  0.108108  0.195122Pr     0.108108
+Re     1.000000
+Acc    0.108108
+F1     0.195122
+dtype: float64Pr    NaN
+Re    NaN
+Acc   NaN
+F1    NaN
+dtype: float64
+
+0.30
+         Pr   Re       Acc        F1
+0  0.108108  1.0  0.108108  0.195122Pr     0.108108
+Re     1.000000
+Acc    0.108108
+F1     0.195122
+dtype: float64Pr    NaN
+Re    NaN
+Acc   NaN
+F1    NaN
+dtype: float64
+
+0.40
+         Pr   Re       Acc        F1
+0  0.108108  1.0  0.108108  0.195122Pr     0.108108
+Re     1.000000
+Acc    0.108108
+F1     0.195122
+dtype: float64Pr    NaN
+Re    NaN
+Acc   NaN
+F1    NaN
+dtype: float64
+
+0.50
+         Pr   Re       Acc        F1
+0  0.108108  1.0  0.108108  0.195122Pr     0.108108
+Re     1.000000
+Acc    0.108108
+F1     0.195122
+dtype: float64Pr    NaN
+Re    NaN
+Acc   NaN
+F1    NaN
+dtype: float64
+
+0.60
+         Pr   Re       Acc        F1
+0  0.108108  1.0  0.108108  0.195122Pr     0.108108
+Re     1.000000
+Acc    0.108108
+F1     0.195122
+dtype: float64Pr    NaN
+Re    NaN
+Acc   NaN
+F1    NaN
+dtype: float64
+
+0.70
+         Pr   Re       Acc        F1
+0  0.108108  1.0  0.108108  0.195122Pr     0.108108
+Re     1.000000
+Acc    0.108108
+F1     0.195122
+dtype: float64Pr    NaN
+Re    NaN
+Acc   NaN
+F1    NaN
+dtype: float64
+
+0.80
+         Pr   Re       Acc        F1
+0  0.108108  1.0  0.108108  0.195122Pr     0.108108
+Re     1.000000
+Acc    0.108108
+F1     0.195122
+dtype: float64Pr    NaN
+Re    NaN
+Acc   NaN
+F1    NaN
+dtype: float64
+
+0.90
+         Pr   Re       Acc        F1
+0  0.108108  1.0  0.108108  0.195122Pr     0.108108
+Re     1.000000
+Acc    0.108108
+F1     0.195122
+dtype: float64Pr    NaN
+Re    NaN
+Acc   NaN
+F1    NaN
+dtype: float64
+
+1.00
+         Pr   Re       Acc        F1
+0  0.108108  1.0  0.108108  0.195122Pr     0.108108
+Re     1.000000
+Acc    0.108108
+F1     0.195122
+dtype: float64Pr    NaN
+Re    NaN
+Acc   NaN
+F1    NaN
+dtype: float64
+
+1.10
+         Pr   Re       Acc        F1
+0  0.108108  1.0  0.108108  0.195122Pr     0.108108
+Re     1.000000
+Acc    0.108108
+F1     0.195122
+dtype: float64Pr    NaN
+Re    NaN
+Acc   NaN
+F1    NaN
+dtype: float64
+
+1.20
+         Pr   Re       Acc        F1
+0  0.108108  1.0  0.108108  0.195122Pr     0.108108
+Re     1.000000
+Acc    0.108108
+F1     0.195122
+dtype: float64Pr    NaN
+Re    NaN
+Acc   NaN
+F1    NaN
+dtype: float64
+
+1.30
+         Pr   Re       Acc        F1
+0  0.108108  1.0  0.108108  0.195122Pr     0.108108
+Re     1.000000
+Acc    0.108108
+F1     0.195122
+dtype: float64Pr    NaN
+Re    NaN
+Acc   NaN
+F1    NaN
+dtype: float64
+
+1.40
+         Pr   Re       Acc        F1
+0  0.108108  1.0  0.108108  0.195122Pr     0.108108
+Re     1.000000
+Acc    0.108108
+F1     0.195122
+dtype: float64Pr    NaN
+Re    NaN
+Acc   NaN
+F1    NaN
+dtype: float64
+
+1.50
+         Pr   Re       Acc        F1
+0  0.108108  1.0  0.108108  0.195122Pr     0.108108
+Re     1.000000
+Acc    0.108108
+F1     0.195122
+dtype: float64Pr    NaN
+Re    NaN
+Acc   NaN
+F1    NaN
+dtype: float64
+
+1.60
+         Pr   Re       Acc        F1
+0  0.108108  1.0  0.108108  0.195122Pr     0.108108
+Re     1.000000
+Acc    0.108108
+F1     0.195122
+dtype: float64Pr    NaN
+Re    NaN
+Acc   NaN
+F1    NaN
+dtype: float64
+
+1.70
+         Pr   Re       Acc        F1
+0  0.108108  1.0  0.108108  0.195122Pr     0.108108
+Re     1.000000
+Acc    0.108108
+F1     0.195122
+dtype: float64Pr    NaN
+Re    NaN
+Acc   NaN
+F1    NaN
+dtype: float64
+
+1.80
+         Pr   Re       Acc        F1
+0  0.108108  1.0  0.108108  0.195122Pr     0.108108
+Re     1.000000
+Acc    0.108108
+F1     0.195122
+dtype: float64Pr    NaN
+Re    NaN
+Acc   NaN
+F1    NaN
+dtype: float64
+
+1.90
+         Pr   Re       Acc        F1
+0  0.108108  1.0  0.108108  0.195122Pr     0.108108
+Re     1.000000
+Acc    0.108108
+F1     0.195122
+dtype: float64Pr    NaN
+Re    NaN
+Acc   NaN
+F1    NaN
+dtype: float64
+
+2.00
+         Pr   Re       Acc        F1
+0  0.108108  1.0  0.108108  0.195122Pr     0.108108
+Re     1.000000
+Acc    0.108108
+F1     0.195122
+dtype: float64Pr    NaN
+Re    NaN
+Acc   NaN
+F1    NaN
+dtype: float64
+
+2.10
+         Pr   Re       Acc        F1
+0  0.108108  1.0  0.108108  0.195122Pr     0.108108
+Re     1.000000
+Acc    0.108108
+F1     0.195122
+dtype: float64Pr    NaN
+Re    NaN
+Acc   NaN
+F1    NaN
+dtype: float64
+
+2.20
+         Pr   Re       Acc        F1
+0  0.108108  1.0  0.108108  0.195122Pr     0.108108
+Re     1.000000
+Acc    0.108108
+F1     0.195122
+dtype: float64Pr    NaN
+Re    NaN
+Acc   NaN
+F1    NaN
+dtype: float64
+
+2.30
+         Pr   Re       Acc        F1
+0  0.108108  1.0  0.108108  0.195122Pr     0.108108
+Re     1.000000
+Acc    0.108108
+F1     0.195122
+dtype: float64Pr    NaN
+Re    NaN
+Acc   NaN
+F1    NaN
+dtype: float64
+
+2.40
+         Pr   Re       Acc        F1
+0  0.108108  1.0  0.108108  0.195122Pr     0.108108
+Re     1.000000
+Acc    0.108108
+F1     0.195122
+dtype: float64Pr    NaN
+Re    NaN
+Acc   NaN
+F1    NaN
+dtype: float64
+
+2.50
+         Pr   Re       Acc        F1
+0  0.108108  1.0  0.108108  0.195122Pr     0.108108
+Re     1.000000
+Acc    0.108108
+F1     0.195122
+dtype: float64Pr    NaN
+Re    NaN
+Acc   NaN
+F1    NaN
+dtype: float64
+
+2.60
+         Pr   Re       Acc        F1
+0  0.108108  1.0  0.108108  0.195122Pr     0.108108
+Re     1.000000
+Acc    0.108108
+F1     0.195122
+dtype: float64Pr    NaN
+Re    NaN
+Acc   NaN
+F1    NaN
+dtype: float64
+
+2.70
+         Pr   Re       Acc        F1
+0  0.108108  1.0  0.108108  0.195122Pr     0.108108
+Re     1.000000
+Acc    0.108108
+F1     0.195122
+dtype: float64Pr    NaN
+Re    NaN
+Acc   NaN
+F1    NaN
+dtype: float64
+
+2.80
+         Pr   Re       Acc        F1
+0  0.108108  1.0  0.108108  0.195122Pr     0.108108
+Re     1.000000
+Acc    0.108108
+F1     0.195122
+dtype: float64Pr    NaN
+Re    NaN
+Acc   NaN
+F1    NaN
+dtype: float64
+
+2.90
+         Pr   Re       Acc        F1
+0  0.108108  1.0  0.108108  0.195122Pr     0.108108
+Re     1.000000
+Acc    0.108108
+F1     0.195122
+dtype: float64Pr    NaN
+Re    NaN
+Acc   NaN
+F1    NaN
+dtype: float64
+
+3.00
+         Pr   Re       Acc        F1
+0  0.108108  1.0  0.108108  0.195122Pr     0.108108
+Re     1.000000
+Acc    0.108108
+F1     0.195122
+dtype: float64Pr    NaN
+Re    NaN
+Acc   NaN
+F1    NaN
+dtype: float64
+
+3.10
+         Pr   Re       Acc        F1
+0  0.108108  1.0  0.108108  0.195122Pr     0.108108
+Re     1.000000
+Acc    0.108108
+F1     0.195122
+dtype: float64Pr    NaN
+Re    NaN
+Acc   NaN
+F1    NaN
+dtype: float64
+
+3.20
+         Pr   Re       Acc        F1
+0  0.108108  1.0  0.108108  0.195122Pr     0.108108
+Re     1.000000
+Acc    0.108108
+F1     0.195122
+dtype: float64Pr    NaN
+Re    NaN
+Acc   NaN
+F1    NaN
+dtype: float64
+
+3.30
+         Pr   Re       Acc        F1
+0  0.108108  1.0  0.108108  0.195122Pr     0.108108
+Re     1.000000
+Acc    0.108108
+F1     0.195122
+dtype: float64Pr    NaN
+Re    NaN
+Acc   NaN
+F1    NaN
+dtype: float64
+
+3.40
+         Pr   Re       Acc        F1
+0  0.108108  1.0  0.108108  0.195122Pr     0.108108
+Re     1.000000
+Acc    0.108108
+F1     0.195122
+dtype: float64Pr    NaN
+Re    NaN
+Acc   NaN
+F1    NaN
+dtype: float64
+
+3.50
+         Pr   Re       Acc        F1
+0  0.108108  1.0  0.108108  0.195122Pr     0.108108
+Re     1.000000
+Acc    0.108108
+F1     0.195122
+dtype: float64Pr    NaN
+Re    NaN
+Acc   NaN
+F1    NaN
+dtype: float64
+
+3.60
+         Pr   Re       Acc        F1
+0  0.108108  1.0  0.108108  0.195122Pr     0.108108
+Re     1.000000
+Acc    0.108108
+F1     0.195122
+dtype: float64Pr    NaN
+Re    NaN
+Acc   NaN
+F1    NaN
+dtype: float64
+
+3.70
+         Pr   Re       Acc        F1
+0  0.108108  1.0  0.108108  0.195122Pr     0.108108
+Re     1.000000
+Acc    0.108108
+F1     0.195122
+dtype: float64Pr    NaN
+Re    NaN
+Acc   NaN
+F1    NaN
+dtype: float64
+
+3.80
+         Pr   Re       Acc        F1
+0  0.108108  1.0  0.108108  0.195122Pr     0.108108
+Re     1.000000
+Acc    0.108108
+F1     0.195122
+dtype: float64Pr    NaN
+Re    NaN
+Acc   NaN
+F1    NaN
+dtype: float64
+
+3.90
+         Pr   Re       Acc        F1
+0  0.108108  1.0  0.108108  0.195122Pr     0.108108
+Re     1.000000
+Acc    0.108108
+F1     0.195122
+dtype: float64Pr    NaN
+Re    NaN
+Acc   NaN
+F1    NaN
+dtype: float64
+
+4.00
+         Pr   Re       Acc        F1
+0  0.108108  1.0  0.108108  0.195122Pr     0.108108
+Re     1.000000
+Acc    0.108108
+F1     0.195122
+dtype: float64Pr    NaN
+Re    NaN
+Acc   NaN
+F1    NaN
+dtype: float64
+
+4.10
+         Pr   Re       Acc        F1
+0  0.108108  1.0  0.108108  0.195122Pr     0.108108
+Re     1.000000
+Acc    0.108108
+F1     0.195122
+dtype: float64Pr    NaN
+Re    NaN
+Acc   NaN
+F1    NaN
+dtype: float64
+
+4.20
+         Pr   Re       Acc        F1
+0  0.108108  1.0  0.108108  0.195122Pr     0.108108
+Re     1.000000
+Acc    0.108108
+F1     0.195122
+dtype: float64Pr    NaN
+Re    NaN
+Acc   NaN
+F1    NaN
+dtype: float64
+
+4.30
+         Pr   Re       Acc        F1
+0  0.108108  1.0  0.108108  0.195122Pr     0.108108
+Re     1.000000
+Acc    0.108108
+F1     0.195122
+dtype: float64Pr    NaN
+Re    NaN
+Acc   NaN
+F1    NaN
+dtype: float64
+
+4.40
+         Pr   Re       Acc        F1
+0  0.108108  1.0  0.108108  0.195122Pr     0.108108
+Re     1.000000
+Acc    0.108108
+F1     0.195122
+dtype: float64Pr    NaN
+Re    NaN
+Acc   NaN
+F1    NaN
+dtype: float64
+
+4.50
+         Pr   Re       Acc        F1
+0  0.108108  1.0  0.108108  0.195122Pr     0.108108
+Re     1.000000
+Acc    0.108108
+F1     0.195122
+dtype: float64Pr    NaN
+Re    NaN
+Acc   NaN
+F1    NaN
+dtype: float64
+
+4.60
+         Pr   Re       Acc        F1
+0  0.108108  1.0  0.108108  0.195122Pr     0.108108
+Re     1.000000
+Acc    0.108108
+F1     0.195122
+dtype: float64Pr    NaN
+Re    NaN
+Acc   NaN
+F1    NaN
+dtype: float64
+
+4.70
+         Pr   Re       Acc        F1
+0  0.108108  1.0  0.108108  0.195122Pr     0.108108
+Re     1.000000
+Acc    0.108108
+F1     0.195122
+dtype: float64Pr    NaN
+Re    NaN
+Acc   NaN
+F1    NaN
+dtype: float64
+
+4.80
+         Pr   Re       Acc        F1
+0  0.108108  1.0  0.108108  0.195122Pr     0.108108
+Re     1.000000
+Acc    0.108108
+F1     0.195122
+dtype: float64Pr    NaN
+Re    NaN
+Acc   NaN
+F1    NaN
+dtype: float64
+
+4.90
+         Pr   Re       Acc        F1
+0  0.108108  1.0  0.108108  0.195122Pr     0.108108
+Re     1.000000
+Acc    0.108108
+F1     0.195122
+dtype: float64Pr    NaN
+Re    NaN
+Acc   NaN
+F1    NaN
+dtype: float64
+

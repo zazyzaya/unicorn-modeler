@@ -1,0 +1,1 @@
+python model.py -t /mnt/bigboi_8TB/nb_prior/sketch/train -u /mnt/bigboi_8TB/nb_prior/sketch/test -c 5 -v -m mean

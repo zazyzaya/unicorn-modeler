@@ -6,9 +6,11 @@
 ##########################################################################################
 import argparse
 import numpy as np
+import pandas as pd 
 import random
 import os
 import sys
+import json 
 from helper.profile import BestClusterGroup, Model, test_single_graph
 from scipy.spatial.distance import pdist, squareform, hamming
 from sklearn.model_selection import KFold, ShuffleSplit
@@ -48,14 +50,10 @@ def save_model(model, model_name, fh):
         fh.write("{} ".format(evol))
     fh.write("\n")
 
-
-def load_sketches(fh):
-    """Load sketches in a file from the handle @fh to memory as numpy arrays. """
-    sketches = list()
-    for line in fh:
-        sketch = map(long, line.strip().split())
-        sketches.append(sketch)
-    return np.array(sketches)
+import torch 
+def load_tensor(fn):
+    sk = torch.load(fn)
+    return sk.numpy()
 
 
 def pairwise_distance(arr, method='hamming'):
@@ -75,35 +73,33 @@ def model_graphs(train_files, model_file, max_cluster_num=6, num_trials=20, max_
     else:
         print("\33[5;30;42m[INFO]\033[0m Model is not saved, use --save-model to save the model")
     for train_file in train_files:
-        with open(train_file, 'r') as f:
-            sketches = load_sketches(f)
-            # @dists contains pairwise Hamming distance between two sketches in @sketches.
-            try:
-                dists = pairwise_distance(sketches)
-            except Exception as e:
-                print("\33[101m[ERROR]\033[0m Exception occurred in modeling from file {}: {}".format(train_file, e))
-                raise RuntimeError("Model builing failed: {}".format(e))
-            # Define a @distance function to use to optimize.
-            def distance(x, y):
-                return dists[x][y]
-            best_cluster_group = BestClusterGroup()
-            best_cluster_group.optimize(arrs=sketches, distance=distance, max_cluster_num=max_cluster_num, num_trials=num_trials, max_iterations=max_iterations)
-            # With the best medoids, we can compute some statistics for the model.
-            model = Model(train_file)
-            model.construct(sketches, dists, best_cluster_group)
-            print("\x1b[6;30;42m[SUCCESS]\x1b[0m Model from {} is done...".format(train_file))
-            # Save some model information in DEBUG_INFO if -v is turned on
-            if isinstance(DEBUG_INFO, dict):
-                DEBUG_INFO[train_file] = model.get_members()
+        sketches = load_tensor(train_file)
+        # @dists contains pairwise Hamming distance between two sketches in @sketches.
+        try:
+            dists = pairwise_distance(sketches)
+        except Exception as e:
+            print("\33[101m[ERROR]\033[0m Exception occurred in modeling from file {}: {}".format(train_file, e))
+            raise RuntimeError("Model builing failed: {}".format(e))
+        # Define a @distance function to use to optimize.
+        def distance(x, y):
+            return dists[x][y]
+        best_cluster_group = BestClusterGroup()
+        best_cluster_group.optimize(arrs=sketches, distance=distance, max_cluster_num=max_cluster_num, num_trials=num_trials, max_iterations=max_iterations)
+        # With the best medoids, we can compute some statistics for the model.
+        model = Model(train_file)
+        model.construct(sketches, dists, best_cluster_group)
+        print("\x1b[6;30;42m[SUCCESS]\x1b[0m Model from {} is done...".format(train_file))
+        # Save some model information in DEBUG_INFO if -v is turned on
+        if isinstance(DEBUG_INFO, dict):
+            DEBUG_INFO[train_file] = model.get_members()
 
-	    # Save model
-            if model_file:
-                print("\x1b[6;30;42m[STATUS]\x1b[0m Saving the model {} to {}...".format(train_file, model_file))
-                save_model(model, train_file, savefile)
+        # Save model
+        if model_file:
+            print("\x1b[6;30;42m[STATUS]\x1b[0m Saving the model {} to {}...".format(train_file, model_file))
+            save_model(model, train_file, savefile)
 
-            models[train_file] = model
-        # Close the file and proceed to the next model.
-        f.close()
+        models[train_file] = model
+        
     if model_file:
         savefile.close()
     return models
@@ -120,19 +116,18 @@ def test_graphs(test_files, models, metric, num_stds):
     
     printout = ""
     for test_file in test_files:
-        with open(test_file, 'r') as f:
-            # if DEBUG_INFO exists, then we will
-            # track debugging information for
-            # each test graph. The per-graph debugging
-            # information is stored in a dictionary
-            test_info = None
-            if isinstance(DEBUG_INFO, dict):
-                test_info = dict()
-            sketches = load_sketches(f)
-            abnormal, max_abnormal_point, num_fitted_model = test_single_graph(sketches, models, metric, num_stds, test_info)
-            if isinstance(DEBUG_INFO, dict):
-                DEBUG_INFO[test_file] = test_info
-        f.close()
+        # if DEBUG_INFO exists, then we will
+        # track debugging information for
+        # each test graph. The per-graph debugging
+        # information is stored in a dictionary
+        test_info = None
+        if isinstance(DEBUG_INFO, dict):
+            test_info = dict()
+        sketches = load_tensor(test_file)
+        abnormal, max_abnormal_point, num_fitted_model = test_single_graph(sketches, models, metric, num_stds, test_info)
+        if isinstance(DEBUG_INFO, dict):
+            DEBUG_INFO[test_file] = test_info
+        
         total_graphs_tested += 1
         if not abnormal: # The graph is considered normal
             printout += "{} is NORMAL fitting {}/{} models\n".format(test_file, num_fitted_model, len(models))
@@ -176,11 +171,13 @@ if __name__ == "__main__":
     parser.add_argument('-p', '--model-path', help='file path to save the model', default='model.txt')
     parser.add_argument('-c', '--cross-validation', help='number of cross validation we perform (use 0 to turn off cross validation)', type=int, default=5)
     parser.add_argument('-v', '--verbose', help='produce debugging information', action='store_true')
+    parser.add_argument('-o', '--outfile', default='output.txt')
     args = parser.parse_args()
 
     SEED = args.seed
     random.seed(SEED)
     np.random.seed(SEED)
+
     print("\33[5;30;42m[INFO]\033[0m Random number seed: {}".format(SEED))
 
     if args.verbose:
@@ -214,6 +211,8 @@ if __name__ == "__main__":
         model_save_path = args.model_path
     models = model_graphs(train_files, model_save_path)
     
+    saved_metrics = {s:[] for s in std_config}
+
     # Perform K-fold cross validation, unless turned off
     if args.cross_validation == 0:
         print("\33[5;30;42m[INFO]\033[0m No cross validation specified, use --cross-validation")
@@ -227,6 +226,11 @@ if __name__ == "__main__":
                 print("Metric: {}\tSTD: {}".format(tm, ns))
                 print("Accuracy: {}\tPrecision: {}\tRecall: {}\tF-1: {}".format(accuracy, precision, recall, f_measure))
                 print("{}".format(printout))
+
+                saved_metrics[ns].append({
+                    'Pr': precision, 'Re': recall,
+                    'Acc': accuracy, 'F1': f_measure
+                })
     else:
         kf = ShuffleSplit(n_splits=args.cross_validation, test_size=0.2, random_state=0)
         print("\x1b[6;30;42m[STATUS]\x1b[0m Performing {} cross validation".format(args.cross_validation))
@@ -250,16 +254,22 @@ if __name__ == "__main__":
                     print("Metric: {} STD: {}".format(tm, ns))
                     print("Accuracy: {}\tPrecision: {}\tRecall: {}\tF-1: {}".format(accuracy, precision, recall, f_measure))
                     print("{}".format(printout))
+
+                    saved_metrics[ns].append({
+                        'Pr': precision, 'Re': recall,
+                        'Acc': accuracy, 'F1': f_measure
+                    })
+
             cv += 1
 
-    # Debug print for Visicorn
-    if args.verbose:
-        for tf in train_files:
-            print(tf)
-            print(DEBUG_INFO[tf])
-        for tf in test_files:
-            print(tf)
-            print(DEBUG_INFO[tf])
-
     print("\x1b[6;30;42m[SUCCESS]\x1b[0m Unicorn is finished")
-
+    print(json.dumps({'saved':saved_metrics}, indent=2))
+    dfs = {k:pd.DataFrame(v) for k,v in saved_metrics.items()}
+    
+    with open(args.outfile, 'w+') as f:
+        for k,df in dfs.items():
+            f.write('%0.2f\n' % k)
+            f.write(str(df) + '\n')
+            f.write(str(df.mean()) + '\n')
+            f.write(str(df.sem()) + '\n')
+            f.write('\n')
